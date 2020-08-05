@@ -17,7 +17,8 @@ public class Main {
     }
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) 	
+    {
         ArrayList<AbstractAnimal> animalCollection = new ArrayList<AbstractAnimal>();
 
         //Mammals
@@ -44,43 +45,38 @@ public class Main {
         //Lambda Functions  
 
         //1.  - using numbers with "a" to tell java which order to start from
-        System.out.println();
-        System.out.println(" *** List all the animals in descending order by year named ***");
+        System.out.println("\n*** List all the animals in descending order by year named ***\n");
         animalCollection.sort((a1, a2) -> a2.getyearDiscovered() - a1.getyearDiscovered());
         animalCollection.forEach(animal -> System.out.println(animal.getName() + ": " + animal.getyearDiscovered()));
 
         //2.
-        System.out.println();
-        System.out.println("*** List all the animals alphabetically ***");
+        System.out.println("\n*** List all the animals alphabetically ***\n");
         animalCollection.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
         animalCollection.forEach(animal -> System.out.println(animal.getName()));
 
         //3.
-        System.out.println();
-        System.out.println("*** List all the animals order by how they move ***");
+        System.out.println("\n*** List all the animals order by how they move ***\n");
         animalCollection.sort((a1, a2) -> a1.move().compareToIgnoreCase(a2.move()));
         animalCollection.forEach(animal -> System.out.println(animal.getName() + ": " + animal.move()));
 
         //4. - not using a number with "a" because I only wanted to print out animals with a certain trait, not in any order inparticular.
-        System.out.println();
-        System.out.println(" *** List only those animals the breath with lungs ***");
+        System.out.println("\n *** List only those animals the breath with lungs ***\n");
         printAnimals(animalCollection, a -> a.breath() == "lungs");
 
         //.5
-        System.out.println();
-        System.out.println(" *** List only those animals that breath with lungs and were named in 1758 ***");
+        System.out.println("\n*** List only those animals that breath with lungs and were named in 1758 ***\n");
         printAnimals(animalCollection, animal -> animal.breath().equals("lungs") && animal.getyearDiscovered() == 1758);
 
         //6.
-        System.out.println();
-        System.out.println(" *** List only those animals that lay eggs and breath with lungs ***");
+        System.out.println("\n*** List only those animals that lay eggs and breath with lungs ***\n");
         printAnimals(animalCollection, animal -> animal.breath().equals("lungs") && animal.reproduce().equals("eggs"));
 
         //.7
-        System.out.println();
-        System.out.println(" *** List alphabetically only those animals that were named in 1758 ***");
+        System.out.println( "\n*** List alphabetically only those animals that were named in 1758 ***\n");
         animalCollection.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
         printAnimals(animalCollection, animal -> animal.getyearDiscovered() == 1758);
+
+
     }
 
 }
