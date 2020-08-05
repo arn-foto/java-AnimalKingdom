@@ -1,7 +1,9 @@
 package animalkingdomApp;
 
-public class Mammal extends AbstractAnimal {
-    public Mammal(String name, int yearDiscovered) {
+public class Mammal extends AbstractAnimal
+ {
+    public Mammal(String name, int yearDiscovered) 
+    {
         super(name, yearDiscovered);
     }
 

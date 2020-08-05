@@ -3,9 +3,12 @@ package animalkingdomApp;
 import java.util.ArrayList;
 
 public class Main {
-    public static void printAnimals(ArrayList<AbstractAnimal> animal, CheckAnimal tester) {
-        for (AbstractAnimal a : animal) {
-            if (tester.test(a)) {
+    public static void printAnimals(ArrayList<AbstractAnimal> animal, CheckAnimal tester)
+     {
+        for (AbstractAnimal a : animal) 
+        {
+            if (tester.test(a)) 
+            {
                 System.out.println(a.getName() + " " + a.reproduce() + " " + a.move() + " " + a.breath() + " " + a.getyearDiscovered());
             }
         }

@@ -31,7 +31,7 @@ public abstract class AbstractAnimal {
         return yearDiscovered;
     }
 
-    // print out the statement below into a string containing animal data
+    // This prints out the statement below into a string containing animal data
     @Override
     public String toString() {
         return "Name: " + getName() + " Year Named: " + getyearDiscovered() + "\n";

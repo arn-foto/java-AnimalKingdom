@@ -1,8 +1,10 @@
 package animalkingdomApp;
 
 
-public class Fish extends AbstractAnimal {
-    public Fish(String name, int yearDiscovered) {
+public class Fish extends AbstractAnimal 
+{
+    public Fish(String name, int yearDiscovered)
+     {
         super(name, yearDiscovered);
     }
 
@@ -20,5 +22,4 @@ public class Fish extends AbstractAnimal {
     public String reproduce() {
         return "eggs";
     }
-
 }
