@@ -1,5 +1,6 @@
 package animalkingdomApp;
 
+// interfaces can implement other interfaces and can extend an abstract class.
 public abstract class AbstractAnimal {
 
     private static int maxID = 0;

@@ -1,5 +1,6 @@
 package animalkingdomApp;
 
+// interfaces can implement other interfaces and can extend an abstract class.
 public class Bird extends AbstractAnimal
  {
     public Bird(String name, int yearDiscovered)

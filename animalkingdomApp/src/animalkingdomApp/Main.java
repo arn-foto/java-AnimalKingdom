@@ -41,9 +41,9 @@ public class Main {
         animalCollection.add(new Fish("Catfish", 1817));
         animalCollection.add(new Fish("Perch", 1758));
 
-        //Lambda Functions   - using numbers with "a" to tell java which order to start from
+        //Lambda Functions  
 
-        //1.
+        //1.  - using numbers with "a" to tell java which order to start from
         System.out.println();
         System.out.println(" *** List all the animals in descending order by year named ***");
         animalCollection.sort((a1, a2) -> a2.getyearDiscovered() - a1.getyearDiscovered());
@@ -61,7 +61,7 @@ public class Main {
         animalCollection.sort((a1, a2) -> a1.move().compareToIgnoreCase(a2.move()));
         animalCollection.forEach(animal -> System.out.println(animal.getName() + ": " + animal.move()));
 
-        //4. - not using a number with "a" because i only wanted to print out animals with a certain trait, not in any order inparticular.
+        //4. - not using a number with "a" because I only wanted to print out animals with a certain trait, not in any order inparticular.
         System.out.println();
         System.out.println(" *** List only those animals the breath with lungs ***");
         printAnimals(animalCollection, a -> a.breath() == "lungs");
