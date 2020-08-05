@@ -1,5 +1,7 @@
 package animalkingdomApp;
 
+
+// using this import for the arraylist
 import java.util.ArrayList;
 
 public class Main {

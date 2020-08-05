@@ -1,7 +1,7 @@
 package animalkingdomApp;
 
-
 public abstract class AbstractAnimal {
+
     private static int maxID = 0;
 
     int id;
@@ -32,6 +32,7 @@ public abstract class AbstractAnimal {
     }
 
     // This prints out the statement below into a string containing animal data
+
     @Override
     public String toString() {
         return "Name: " + getName() + " Year Named: " + getyearDiscovered() + "\n";
