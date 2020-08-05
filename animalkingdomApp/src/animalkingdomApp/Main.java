@@ -44,40 +44,40 @@ public class Main {
 
         //1.
         System.out.println();
-        System.out.println(" Animals by discovery year:");
-        animalCollection.sort((a1, a2) -> a1.getyearDiscovered() - a2.getyearDiscovered());
+        System.out.println(" *** List all the animals in descending order by year named ***");
+        animalCollection.sort((a1, a2) -> a2.getyearDiscovered() - a1.getyearDiscovered());
         animalCollection.forEach(animal -> System.out.println(animal.getName() + ": " + animal.getyearDiscovered()));
 
         //2.
         System.out.println();
-        System.out.println(" Animals Alphabetically:");
+        System.out.println("*** List all the animals alphabetically ***");
         animalCollection.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
         animalCollection.forEach(animal -> System.out.println(animal.getName()));
 
         //3.
         System.out.println();
-        System.out.println(" Animals by how they move:");
+        System.out.println("*** List all the animals order by how they move ***");
         animalCollection.sort((a1, a2) -> a1.move().compareToIgnoreCase(a2.move()));
         animalCollection.forEach(animal -> System.out.println(animal.getName() + ": " + animal.move()));
 
         //4.
         System.out.println();
-        System.out.println(" Animals that breathe with lungs:");
+        System.out.println(" *** List only those animals the breath with lungs ***");
         printAnimals(animalCollection, a -> a.breath() == "lungs");
 
         //.5
         System.out.println();
-        System.out.println(" Animals that breathe with lungs & named in 1758:");
+        System.out.println(" *** List only those animals that breath with lungs and were named in 1758 ***");
         printAnimals(animalCollection, animal -> animal.breath().equals("lungs") && animal.getyearDiscovered() == 1758);
 
         //6.
         System.out.println();
-        System.out.println(" Animals that lay eggs and breathe with lungs:");
+        System.out.println(" *** List only those animals that lay eggs and breath with lungs ***");
         printAnimals(animalCollection, animal -> animal.breath().equals("lungs") && animal.reproduce().equals("eggs"));
 
         //.7
         System.out.println();
-        System.out.println(" Animals that were named in 1758 alphabetically:");
+        System.out.println(" *** List alphabetically only those animals that were named in 1758 ***");
         animalCollection.sort((a1, a2) -> a1.getName().compareToIgnoreCase(a2.getName()));
         printAnimals(animalCollection, animal -> animal.getyearDiscovered() == 1758);
     }
