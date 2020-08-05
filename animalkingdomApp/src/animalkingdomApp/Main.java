@@ -16,6 +16,7 @@ public class Main {
         }
     }
 
+
     public static void main(String[] args) {
         ArrayList<AbstractAnimal> animalCollection = new ArrayList<AbstractAnimal>();
 
@@ -40,7 +41,7 @@ public class Main {
         animalCollection.add(new Fish("Catfish", 1817));
         animalCollection.add(new Fish("Perch", 1758));
 
-        //Lambda Functions
+        //Lambda Functions   - using numbers with "a" to tell java which order to start from
 
         //1.
         System.out.println();
@@ -60,7 +61,7 @@ public class Main {
         animalCollection.sort((a1, a2) -> a1.move().compareToIgnoreCase(a2.move()));
         animalCollection.forEach(animal -> System.out.println(animal.getName() + ": " + animal.move()));
 
-        //4.
+        //4. - not using a number with "a" because i only wanted to print out animals with a certain trait, not in any order inparticular.
         System.out.println();
         System.out.println(" *** List only those animals the breath with lungs ***");
         printAnimals(animalCollection, a -> a.breath() == "lungs");
