@@ -1,0 +1,48 @@
+package animalkingdomApp;
+
+// interfaces can implement other interfaces and can extend an abstract class.
+public abstract class AbstractAnimal {
+
+    private static int maxID = 0;
+
+    int id;
+    String name;
+    int yearDiscovered;
+
+    public AbstractAnimal(String name, int yearDiscovered) {
+        maxID++;
+        id = maxID;
+        this.name = name;
+        this.yearDiscovered = yearDiscovered;
+    }
+
+    public String consume() {
+        return "Food";
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getyearDiscovered() {
+        return yearDiscovered;
+    }
+
+    // This prints out the statement below into a string containing animal data
+
+    @Override
+    public String toString() {
+        return "Name: " + getName() + " Year Named: " + getyearDiscovered() + "\n";
+    }
+
+    public abstract String move();
+
+    public abstract String breath();
+
+    public abstract String reproduce();
+}
+
